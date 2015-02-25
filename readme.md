@@ -9,7 +9,9 @@ A starter kit for a Front-End developer.
 Clone: `http://github.com/dope/gulp-starter.git`
 
 Open terminal and run:
-```npm install # This will install your packages```
+```npm install```
+This will build your packages
 
 Then run:
-```gulp # This will build your assets and create your BrowserSync URL```
+```gulp```
+Tihs will build your assets and generate your BrowserSync URL
