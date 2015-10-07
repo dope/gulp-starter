@@ -28,7 +28,7 @@ var pngquant     = require('imagemin-pngquant');
 *
 **/
 gulp.task('sass', function() {
-  gulp.src('scss/**/*.scss')
+  gulp.src('sass/**/*.sass')
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(prefix('last 2 versions', '> 1%', 'ie 8', 'Android 2', 'Firefox ESR'))
   .pipe(plumber())
@@ -92,7 +92,7 @@ gulp.task('images', function () {
 *
 **/
 gulp.task('default', ['sass', 'browser-sync', 'scripts', 'images'], function () {
-  gulp.watch('scss/**/*.scss', ['sass']);
+  gulp.watch('sass/**/*.sass', ['sass']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('images/*', ['images']);
 });
