@@ -9,6 +9,9 @@ A starter kit for your front-end builds.
 ### Getting Started
 Clone: `http://github.com/dope/gulp-starter.git`
 
-Open terminal and run: `npm install` | This will build your packages
+Once you have cloned the repo, navigate in to the directory via terminal and run.
 
-Then run: `gulp` | This will build your assets and generate your BrowserSync URL
+```bash
+npm install
+gulp
+```
