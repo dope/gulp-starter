@@ -28,7 +28,7 @@ var pngquant     = require('imagemin-pngquant');
 *
 **/
 gulp.task('sass', function() {
-  gulp.src('sass/**/*.sass')
+  gulp.src('sass/**/*.scss')
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(prefix('last 2 versions', '> 1%', 'ie 8', 'Android 2', 'Firefox ESR'))
   .pipe(plumber())
