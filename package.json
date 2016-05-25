@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/dope/gulp-starter",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
     "browser-sync": "^2.0.0",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",
+    "gulp-babel": "^6.1.2",
     "gulp-imagemin": "^2.2.1",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
