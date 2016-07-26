@@ -59,7 +59,9 @@ gulp.task('browser-sync', function() {
 **/
 gulp.task('scripts', function() {
   gulp.src('js/*.js')
-  .pipe(uglify())
+  .pipe(uglify().on('error', function(e){
+    console.log(e);
+  }))
   .pipe(rename({
     dirname: "min",
     suffix: ".min",
