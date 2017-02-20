@@ -1,3 +1,9 @@
+# A modified and combined version of 2 repos
+* https://github.com/dope/gulp-starter
+* https://github.com/ericbarnes/gulp-bower-bootstrap-fontawesome
+
+================================================================================
+
 # Gulp Starter
 A starter kit for your front-end builds.
 
@@ -15,3 +21,16 @@ Once you have cloned the repo, navigate in to the directory via terminal and run
 npm install
 gulp
 ```
+
+================================================================================
+
+# Setting up Gulp, Bower, Bootstrap Sass, & FontAwesome
+
+This is a demo repo for the tutorial [Setting up Gulp, Bower, Bootstrap Sass, & FontAwesome](http://ericlbarnes.com/setting-gulp-bower-bootstrap-sass-fontawesome/).
+
+## Installation
+
+1. Clone this repo.
+2. cd into the directory and run `npm install`
+3. Run `gulp` and it will pull in all dependencies and compile.
+
