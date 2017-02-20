@@ -17,6 +17,8 @@ var uglify       = require('gulp-uglify');
 var rename       = require("gulp-rename");
 var imagemin     = require("gulp-imagemin");
 var pngquant     = require('imagemin-pngquant');
+var compass      = require('gulp-compass');
+var bower        = require('gulp-bower');
 
 /**
 *
@@ -29,7 +31,11 @@ var pngquant     = require('imagemin-pngquant');
 **/
 gulp.task('sass', function() {
   gulp.src('sass/**/*.scss')
-  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(compass({
+    config_file: './config.rb',
+    css: 'css',
+    sass: 'sass'
+  }))
   .pipe(prefix('last 2 versions', '> 1%', 'ie 8', 'Android 2', 'Firefox ESR'))
   .pipe(plumber())
   .pipe(gulp.dest('css'));
@@ -83,6 +89,16 @@ gulp.task('images', function () {
   .pipe(gulp.dest('images'));
 });
 
+/**
+*
+* Bower
+*
+**/
+gulp.task('bower', function() {
+  return bower()
+    .pipe(gulp.dest('./bower_components'))
+});
+
 
 /**
 *
@@ -91,7 +107,7 @@ gulp.task('images', function () {
 * - Watchs for file changes for images, scripts and sass/css
 *
 **/
-gulp.task('default', ['sass', 'browser-sync', 'scripts', 'images'], function () {
+gulp.task('default', ['bower', 'sass', 'browser-sync', 'scripts', 'images'], function () {
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('images/*', ['images']);
