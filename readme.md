@@ -1,3 +1,7 @@
+# A modified and combined version of 2 repos
+* https://github.com/dope/gulp-starter
+* https://github.com/ericbarnes/gulp-bower-bootstrap-fontawesome
+
 ================================================================================
 
 # Gulp Starter
